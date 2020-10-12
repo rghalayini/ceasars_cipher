@@ -1,4 +1,5 @@
 def encoding(message, key):
+    message=message.lower()
     import string
     alphabet=" "+string.ascii_lowercase
     
@@ -15,3 +16,9 @@ def encoding(message, key):
         encoded_list.append(alphabet[encoded_position])
     encoded_message="".join(encoded_list)
     return (encoded_message)
+
+message = input("Enter message to encode: ")
+key = int(input("Enter key (number of steps): "))
+encoded = encoding(message, key)
+print("Encoded message:")
+print(encoded)
